@@ -1,0 +1,29 @@
+{
+  "name": "jest-another-rpg",
+  "version": "1.0.0",
+  "description": "RPG Battle Sim",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wadep23/jest-another-rpg.git"
+  },
+  "keywords": [
+    "RPG",
+    "Battle",
+    "Sim",
+    "Node.js",
+    "Jest"
+  ],
+  "author": "Wade Facer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wadep23/jest-another-rpg/issues"
+  },
+  "homepage": "https://github.com/wadep23/jest-another-rpg#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
