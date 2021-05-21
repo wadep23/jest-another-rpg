@@ -1,10 +1,24 @@
 const { expect } = require('@jest/globals');
 const Player = require('../lib/Player.js');
+const Potion = require('../lib/Potion');
 
-test ('creates a health potion object', () => {
-    const bard = new Player('Wade', 100, 50, 65);
+jest.mock('../lib/Potion');
 
-    expect(bard.name).toBe('Wade');
-    expect(bard.health).toBe(100);
-    expect(bard.strength).toBe(50);
-});
+test("gets player's stats as an object", () => {
+    const player = new Player('Dave');
+  
+    expect(player.getStats()).toHaveProperty('potions');
+    expect(player.getStats()).toHaveProperty('health');
+    expect(player.getStats()).toHaveProperty('strength');
+    expect(player.getStats()).toHaveProperty('agility');
+  });
+  
+  test('gets inventory from player or returns false', () => {
+    const player = new Player('Dave');
+  
+    expect(player.getInventory()).toEqual(expect.any(Array));
+  
+    player.inventory = [];
+  
+    expect(player.getInventory()).toEqual(false);
+  });
