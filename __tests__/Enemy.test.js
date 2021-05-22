@@ -7,4 +7,6 @@ test ('Tests the creation of a new enemy.', () => {
     expect(barbarian.name).toBe('Grog');
     expect(barbarian.weapon).toBe('Craven Edge');
     expect(barbarian.health).toBe(200);
+
+    console.log(barbarian.getDescription());
 });
